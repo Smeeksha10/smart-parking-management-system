@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Slot - Smart Parking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">SmartParking</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="slots.jsp">Slots</a>
+      <a href="booking.html">Book Now</a>
+      <a href="admin-login.html">Admin</a>
+    </nav>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="booking-section">
+    <div class="booking-container">
+      <div class="booking-left">
+        <h1>Reserve Your Parking Slot</h1>
+        <p>
+          Fill in your details to book a parking slot quickly and easily.
+          This system helps reduce waiting time and makes parking management smooth.
+        </p>
+        <div class="booking-info">
+          <div class="info-box">
+            <h3>Fast Booking</h3>
+            <p>Book your slot in a few simple steps.</p>
+          </div>
+          <div class="info-box">
+            <h3>Secure Records</h3>
+            <p>Your booking details can be stored safely in the database.</p>
+          </div>
+          <div class="info-box">
+            <h3>Easy Management</h3>
+            <p>Admins can track and manage all reservations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-right">
+        <form class="booking-form" action="bookSlot" method="post"></form>
+          <h2>Booking Form</h2>
+
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="vehicle">Vehicle Number</label>
+            <input type="text" id="vehicle" name="vehicle" placeholder="e.g. JK02AB1234" required>
+          </div>
+
+          <div class="form-group">
+            <label for="vehicletype">Vehicle Type</label>
+            <select id="vehicletype" name="vehicletype" required>
+              <option value="">Select vehicle type</option>
+              <option value="Car">Car</option>
+              <option value="Bike">Bike</option>
+              <option value="Scooter">Scooter</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="slot">Preferred Slot</label>
+            <select id="slot" name="slot" required>
+              <option value="">Select slot</option>
+              <option value="A1">A1</option>
+              <option value="A2">A2</option>
+              <option value="A3">A3</option>
+              <option value="A4">A4</option>
+              <option value="B1">B1</option>
+              <option value="B2">B2</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Booking Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Entry Time</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+
+          <button type="submit" class="book-btn">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Smart Parking System © 2026 | Booking Page</p>
+  </footer>
+
+</body>
+</html>
